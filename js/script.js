@@ -1,8 +1,34 @@
 $( document ).ready(function() {
 
+    // var setClock = 22545;
+
+    // $('.clock').each(function() {
+        // var clock = $(this);
+        // clock.FlipClock(setClock, {
+        //     clockFace: 'Counter',
+        //     countdown: false,
+        //     language: 'it',
+        //     autoStart:true,
+        // });
+
+        var clock = $('.clock-1').FlipClock(22545, {
+            clockFace: 'Counter',
+            countdown:false,
+            language: 'it',
+            autoStart:true,
+            interval: 10000
+        });
+
+        // setTimeout(function() {
+        //     setInterval(function() {
+        //         clock.increment();
+        //     }, 30000);
+        // });
+
+    // });
     var setClock = 600;
 
-    $('.clock').each(function() {
+    $('.clock-timer').each(function() {
         var clock = $(this);
         clock.FlipClock(setClock, {
             clockFace: 'HourlyCounter',
@@ -11,8 +37,7 @@ $( document ).ready(function() {
             autoStart:true
         });
     });
-
-    $('.faq_list h2').click(function (e) {
+    $('.faq_list h3').click(function (e) {
         $(this).next('.result').slideToggle();
         $(this).toggleClass('active');
     });
@@ -58,3 +83,7 @@ $( document ).ready(function() {
     });
 
 });
+
+{
+
+}
